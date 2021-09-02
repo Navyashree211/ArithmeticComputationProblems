@@ -3,5 +3,5 @@
 echo "enter the three inputs :: "
 read a b c
 
-result=$(($c*$a/$b))
+result=$(($a%$b+$c))
 echo $result
