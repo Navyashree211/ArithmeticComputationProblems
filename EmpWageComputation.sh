@@ -15,3 +15,8 @@ dict[1]=$eq1
 dict[2]=$eq2
 dict[3]=$eq3
 dict[4]=$eq4
+
+array[ ((i++)) ]=${dict[1]}
+array[ ((i++)) ]=${dict[2]}
+array[ ((i++)) ]=${dict[3]}
+array[ ((i++)) ]=${dict[4]}
