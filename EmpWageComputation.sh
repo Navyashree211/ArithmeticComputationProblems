@@ -25,7 +25,7 @@ for((i=0;i<${#array[@]};i++))
 do
    for((j=0;j<${#array[@]}-$i-1;j++))
     do
-       if((${array[$j]}<${array[$j+1]}))
+       if((${array[$j]}>${array[$j+1]}))
         then
              temp=${array[$j]}
              array[$j]=${array[(($j+1))]}
@@ -33,5 +33,5 @@ do
         fi
      done
 done
-echo "Sorting Result and Show in the Descending Order:${array[@]}"
+echo "Sorting Result and Show in the Ascending Order:${array[@]}"
 
