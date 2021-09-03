@@ -20,3 +20,18 @@ array[ ((i++)) ]=${dict[1]}
 array[ ((i++)) ]=${dict[2]}
 array[ ((i++)) ]=${dict[3]}
 array[ ((i++)) ]=${dict[4]}
+
+for((i=0;i<${#array[@]};i++))
+do
+   for((j=0;j<${#array[@]}-$i-1;j++))
+    do
+       if((${array[$j]}<${array[$j+1]}))
+        then
+             temp=${array[$j]}
+             array[$j]=${array[(($j+1))]}
+              array[$j+1]=$temp
+        fi
+     done
+done
+echo "Sorting Result and Show in the Descending Order:${array[@]}"
+
